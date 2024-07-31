@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <!-- yandex map -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=c2d8ddd1-5a9a-4adb-8548-39b31a2ccef6" type="text/javascript"></script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form class="form-send">
+            <input type="text" name="form-send__FIO" class="form-send__field form-send__FIO" placeholder="ФИО">
+            
+            <input type="text" name="form-send__phone" class="form-send__field form-send__phone" placeholder="Телефон">
+            
+            <input type="email" name="form-send__email" class="form-send__field form-send__email" placeholder="Email">
+
+            <div id="form-send__map" name="form-send__map" class="form-send__field form-send__map"></div>
+
+            <input type="text" name="form-send__comment" class="form-send__field form-send__comment" placeholder="Комментарий к заказу (макс. 500 символов)">
+                    
+            <button type="submit" class="form-send__button">Отправить</button>
+            <p class="form-send__message">`</p>
+            
+        </form>
+    </div>
+</body>
+<script src="index.js" type="text/javascript"></script>
+</html>

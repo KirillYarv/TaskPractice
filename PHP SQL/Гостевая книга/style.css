@@ -1,0 +1,94 @@
+:root
+{
+    --margin-comment: 10px;
+    --content-width: 400px;
+}
+
+body, head
+{
+    margin: 0;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+hr
+{
+    width: var(--content-width);
+}
+
+.comments__block p
+{
+    margin-block: 5px;
+}
+
+.comments__user-info
+{
+    display: flex;
+    justify-content: space-between;
+
+    margin-inline: var(--margin-comment);
+}
+
+.comments__text-message
+{
+    margin-inline: var(--margin-comment);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Количество отображаемых строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 3.2em;
+}
+
+.comments__block
+{
+    width: var(--content-width);
+    height: 80px;
+
+    border: 2px black solid;
+}
+
+.comments
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    gap: 20px
+}
+.interaction
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.interaction__name
+{
+    width: 150px;
+}
+
+.interaction__textComment
+{
+    height: 50px;
+}
+
+.interaction__send-button
+{
+    align-self: center;
+    width: 100px;
+
+    margin-bottom: 20px;
+}

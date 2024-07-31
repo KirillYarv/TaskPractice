@@ -1,0 +1,17 @@
+:root
+{
+    --width-content: 500px
+}
+
+
+html,body
+{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+

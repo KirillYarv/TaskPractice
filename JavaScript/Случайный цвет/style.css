@@ -1,0 +1,67 @@
+:root
+{
+    --content-width: 239px;
+}
+
+html,body
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+p
+{
+    margin: 0;    
+}
+
+.interaction
+{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    gap: 20px;
+}
+
+.interaction__content
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    width: var(--content-width);
+}
+hr
+{
+    width: var(--content-width);
+}
+
+.interaction__random-color-button
+{
+    width: 150px;
+    height: 20px;
+}
+input
+{
+    width: 150px;
+    height: 20px;
+}
+.box
+{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(223, 113, 113);
+    
+    border-radius: 10px;
+    border: 2px black solid;
+}

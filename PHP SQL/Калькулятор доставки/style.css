@@ -1,0 +1,52 @@
+body, head
+{
+    margin: 0;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+    gap: 20px;
+}
+
+
+.interaction
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 350px;
+}
+.interaction__field
+{
+    border-width: 0;
+    padding: 0;
+    
+    border: 2px black solid;
+}
+
+.interaction__button
+{
+    align-self: center;
+    width: 100px;
+}
+.error
+{
+    color: red;
+}
+
+.message p
+{
+    text-align: center;
+}

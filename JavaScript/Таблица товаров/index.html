@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="interaction">
+            <div class="interaction__input-filter-field">
+                <p>Цена от: </p>
+                <input class="interaction__input interaction__low-price-input" placeholder="0">
+                <p>до: </p>
+                <input class="interaction__input interaction__high-price-input" placeholder="10000">
+            </div>
+            <button class="interaction__update-button">Обновить</button>
+        </div>
+        <div class="product-table">
+
+        </div>
+        <p class="nothing-message"></p>
+    </div>
+
+</body>
+<script src="js/DataApi.js"></script>
+<script src="js/ProductTable.js"></script>
+<script src="js/index.js" async></script>
+</html>

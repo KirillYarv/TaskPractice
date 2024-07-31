@@ -1,0 +1,68 @@
+:root
+{
+    --width-content: 300px
+}
+
+
+html,body
+{
+    margin: 0;
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+p
+{
+    margin: 0;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+
+    gap: 15px;
+}
+.form-send
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.message
+{
+    text-align: center;
+    opacity: 60%;
+}
+
+#form-send__map
+{
+    width: var(--width-content);
+    height: 200px;
+}
+.form-send__field
+{
+    width: var(--width-content)
+}
+
+.form-send__comment
+{
+    display: flex;
+
+    height: 130px;
+}
+
+.form-send__message
+{
+    text-align: center;
+}
