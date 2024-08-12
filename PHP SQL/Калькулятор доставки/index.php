@@ -22,7 +22,6 @@
                         $city = $cities[$i];
                         print_r("<option id='{$i}' value='{$city}'>{$city}</option>");
                     }
-                    
                     ?>
             </select>
             <input type="text" name="weight" class="interaction__field interaction__weight" placeholder="Вес, кг"/>
