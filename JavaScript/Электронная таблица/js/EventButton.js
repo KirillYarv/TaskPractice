@@ -22,30 +22,32 @@ plusRowButton.addEventListener("click", () => {
         appendEventTd(td);
         tr.appendChild(td);
     });
-
+    addLastElement();
     tbody.appendChild(tr);
 });
 
 minusRowButton.addEventListener("click", () => {
     const tr = tbody.lastChild.childNodes;
     let flag = true;
-    removeId('row');
-    // Просверяем отсутствие данных в какой-либо ячейке
-    tr.forEach(td => {
-        if (td.innerHTML) {
+    const tdsData = [];
+    // Проверяем отсутствие данных в какой-либо ячейке
+    for (let i = 0; i < tr.length; i++) {
+        if (tr[i].innerHTML) {
             flag = confirm("Вы хотите удалить ячейку с данными?");
-
-            if (flag) {
-                return;
-            }
-
-            localStorage.removeItem(td.getAttribute("id"));
+            break;
         }
-    })
+    }
 
     if (tbody.children.length === 1 || !flag) {
         return;
     }
+    removeId('row');
+
+    tr.forEach(td => {
+        localStorage.removeItem(td.getAttribute("id"));
+    });
+
+    addLastElement();
 
     tbody.lastChild.remove();
 });
@@ -53,6 +55,7 @@ minusRowButton.addEventListener("click", () => {
 plusColumnButton.addEventListener("click", () => {
     const trs= document.querySelectorAll("tr");
     addId("column");
+
     let i = 0;
     trs.forEach(tr => {
         const td= document.createElement("td");
@@ -64,32 +67,32 @@ plusColumnButton.addEventListener("click", () => {
         appendEventTd(td);
         tr.appendChild(td);
     });
-    
+    addLastElement();
 });
 
 minusColumnButton.addEventListener("click", () => {
     const trs = document.querySelectorAll("tr");
     let flag = true ;
-    removeId('column');
 
     // Просверяем отсутствие данных в ячейке
     for (let i = 0; i < trs.length; i++) {
         const childNodes = trs[i].childNodes;
         if (childNodes[childNodes.length - 1].innerHTML) {
             flag = confirm("Вы хотите удалить ячейку с данными?");
-
-            if (!flag){
-                break;
-            }
-
-            localStorage.removeItem(childNodes[childNodes.length - 1].getAttribute("id"));
+            break;
         }
     }
 
+    if (trs[0].children.length === 1 || !flag) {
+        return;
+    }
+
+    removeId('column');
+
+    addLastElement();
+
     trs.forEach(tr => {
-        if (tr.children.length === 1 || !flag) {
-            return;
-        }
+        localStorage.removeItem(tr.childNodes[tr.childNodes.length - 1].getAttribute("id"));
         tr.lastChild.remove();
     });
 });
