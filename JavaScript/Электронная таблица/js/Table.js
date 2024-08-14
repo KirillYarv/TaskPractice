@@ -6,6 +6,7 @@ const alphabetN = alphabet.length;
 let columns = [];
 let rows = [];
 console.log(localStorage);
+//localStorage.clear();
 
 function addLastElement() {
     localStorage.setItem("0", lastWord+rows[rows.length - 1]);
@@ -51,7 +52,11 @@ function generateTable()
     const table = document.querySelector("table");
     const tbody = document.createElement("tbody");
 
+    if (!localStorage.getItem("0")){
+        localStorage.setItem("0","A1");
+    }
     const endElement = localStorage.getItem("0");
+
     let lettersEndElement = "";
 
     for (let i = 0; !/^\d+$/.test(endElement[i]); i++) {
